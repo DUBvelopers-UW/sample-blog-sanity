@@ -21,8 +21,6 @@ export default function BlogPostListItem({ post, index }) {
             width={width}
             height={height}
             className="sm:w-64 border rounded-lg dark:border-gray-700 group-hover:opacity-75 transition-opacity"
-            blurDataURL={post.image.lqip}
-            placeholder="blur"
           />
           <div className="sm:p-4 w-full divide-y dark:divide-gray-700">
             <div className="space-y-4 pb-4">

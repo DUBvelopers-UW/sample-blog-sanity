@@ -1,27 +1,14 @@
 import RootLayout from "@/components/global/RootLayout";
 import PostsContainer from "@/components/home/PostsContainer";
-import { useState } from "react";
 
 import client from "@/sanity-utils/client";
 import BlogPostItem from "@/components/home/BlogPostItem";
 
 // Receive the posts as props for the home page
 export default function Home({ posts }) {
-  //  Search Functionality State
-  const [search, setSearch] = useState("");
-
-  // Filter Posts by Search
-  const filteredPosts = posts.filter((post) =>
-    search ? post.title.includes(search) : true
-  );
-
   return (
     <RootLayout title="Home">
-      <PostsContainer
-        posts={filteredPosts}
-        search={search}
-        setSearch={setSearch}
-      >
+      <PostsContainer posts={posts}>
         {/* Posts should go in here */}
       </PostsContainer>
     </RootLayout>
