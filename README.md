@@ -1,4 +1,4 @@
-If you are looking for the completed project, you can find it under the `final` branch.
+If you are looking for the completed project, you can find it under the `final-blog` branch.
 
 ---
 
