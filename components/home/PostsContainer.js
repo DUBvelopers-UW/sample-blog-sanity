@@ -1,5 +1,6 @@
 import { XMarkIcon } from "@heroicons/react/20/solid";
 
+// This is a container for the posts on the home page, and also contains the search functionality
 export default function PostsContainer({ posts, children, search, setSearch }) {
   return (
     <div className="max-w-4xl py-4 mx-auto px-4 lg:px-0">

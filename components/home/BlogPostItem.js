@@ -1,13 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-
 import urlFor from "@/sanity-utils/urlFor";
 import { getImageDimensions } from "@sanity/asset-utils";
-
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
 
 import DateTimeItem from "./DateTimeItem";
 
+// This component will be used to display a single blog post in a list
+// - There is also image optimization here with next/image, Sanity, and LQIP
 export default function BlogPostListItem({ post, index }) {
   const { width, height } = getImageDimensions(post.image);
 
@@ -16,7 +16,7 @@ export default function BlogPostListItem({ post, index }) {
       <Link href={`/${post.slug}`}>
         <div className="flex sm:flex-row flex-col sm:items-center sm:justify-start sm:space-x-4 space-y-4 sm:space-y-0">
           <Image
-            src={urlFor(post.image).url()}
+            src={urlFor(post.image).auto("format").url()}
             alt={post.title}
             width={width}
             height={height}

@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+// This is the navbar component
 export default function Navbar() {
   return (
     <nav className="max-w-4xl mx-auto px-4 lg:px-0">

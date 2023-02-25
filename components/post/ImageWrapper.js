@@ -1,6 +1,8 @@
 import Image from "next/image";
 import urlFor from "@/sanity-utils/urlFor";
 
+// This is the component that displays the post's image
+// - The colors shown are extracted from the image using the Sanity image CDN
 export default function ImageWrapper({ image }) {
   return (
     <div>

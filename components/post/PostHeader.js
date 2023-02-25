@@ -1,5 +1,6 @@
 import DateTimeItem from "../home/DateTimeItem";
 
+// This is the header for the post page
 export default function PostHeader({ post }) {
   return (
     <div className="space-y-4 pt-12 pb-8 text-center flex-col flex items-center justify-start">

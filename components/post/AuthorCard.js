@@ -1,6 +1,7 @@
 import Image from "next/image";
 import urlFor from "@/sanity-utils/urlFor";
 
+// This is the component that displays the author's image and bio
 export default function AuthorCard({ author }) {
   return (
     <div className="space-y-2 pt-8 text-center">

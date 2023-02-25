@@ -1,50 +1,43 @@
-import Index from "@/components/global/Index";
-import client from "@/sanity-utils/client";
-
-import BlogPostItem from "@/components/home/BlogPostItem";
-
+import RootLayout from "@/components/global/RootLayout";
 import PostsContainer from "@/components/home/PostsContainer";
-
 import { useState } from "react";
 
+import client from "@/sanity-utils/client";
+import BlogPostItem from "@/components/home/BlogPostItem";
+
+// Receive the posts as props for the home page
 export default function Home({ posts }) {
+  //  Search Functionality State
   const [search, setSearch] = useState("");
 
+  // Filter Posts by Search
   const filteredPosts = posts.filter((post) =>
     search ? post.title.includes(search) : true
   );
 
   return (
-    <Index title="Home">
+    <RootLayout title="Home">
       <PostsContainer
         posts={filteredPosts}
         search={search}
         setSearch={setSearch}
       >
-        {filteredPosts.map((post, index) => (
-          <BlogPostItem key={post._id} index={index} post={post} />
-        ))}
+        {/* Posts should go in here */}
       </PostsContainer>
-    </Index>
+    </RootLayout>
   );
 }
 
-export async function getStaticProps() {
-  const query = `*[_type == "blogPost"] {
-    title,
-    "slug": slug.current,
-    description,
-    "author": author->{name, image},
-    _createdAt,
-    image {
-      ...,
-      "lqip": asset->metadata.lqip,
-    },
-  }`;
-  const posts = await client.fetch(query);
+// This is a Server Side Props function, which we will use to fetch data from Sanity
+export async function getServerSideProps() {
+  // Create a query to fetch all posts
 
+  // Fetch all posts from Sanity using the client
+
+  // If there are no posts, return 404
   if (!posts) return { notFound: true };
 
+  // Return the posts as props
   return {
     props: {
       posts,
