@@ -1,4 +1,6 @@
-If you are looking for the completed project, you can find it under the `final-blog` branch.
+If you are looking for the completed project, you can find it under the `final-blog` branch. Keep in mind that neither project will work without the `projectId` and `dataset` variables being filled in `/sanity-utils/client.js`.
+
+You can find this information in your Sanity project, in the `sanity.config.js` file.
 
 ---
 
