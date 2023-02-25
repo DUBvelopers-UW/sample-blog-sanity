@@ -1,3 +1,7 @@
+If you are looking for the completed project, you can find it under the `final` branch.
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
